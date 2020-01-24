@@ -83,7 +83,7 @@ public class ChessEliteCore extends Application {
         mainMatrix[6][1] = new Square(BLACK_PAWN);
         mainMatrix[7][1] = new Square(BLACK_PAWN);
 
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < 8; i++) { //fare funzione di update
             for (int j = 0; j < 8; j++) {
                 Square square = mainMatrix[i][j];
 
