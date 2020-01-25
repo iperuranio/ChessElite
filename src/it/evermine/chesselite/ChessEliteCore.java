@@ -6,23 +6,29 @@ import it.evermine.chesselite.chess.Square;
 import it.evermine.chesselite.chess.images.PieceImage;
 import it.evermine.chesselite.chess.pieces.*;
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import lombok.Getter;
-
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class ChessEliteCore extends Application {
     @Getter
-    private static Square[][] mainMatrix = new Square[8][8];
+    private static ChessBoard chessBoard;
     @Getter
     private static Scene mainScene;
-    @Getter
-    private static GridPane guiChessBoard;
     @Getter
     private static Parent parentRoot;
 
@@ -35,8 +41,9 @@ public class ChessEliteCore extends Application {
 
         primaryStage.show();
 
-        guiChessBoard = (GridPane) mainScene.lookup("#chessboard");
+        chessBoard = new ChessBoard(((GridPane) mainScene.lookup("#chessboard")), new Square[8][8]);
 
+        registerEvents();
         loadChessBoard();
     }
 
@@ -64,33 +71,55 @@ public class ChessEliteCore extends Application {
         Piece WHITE_KING = new Pawn(new PieceImage("white_king.png"), true);
         Piece BLACK_KING = new Pawn(new PieceImage("black_king.png"), false);
 
+        List<Square> list = new ArrayList<>();
 
-        mainMatrix[0][0] = new Square(BLACK_ROOK);
-        mainMatrix[1][0] = new Square(BLACK_KNIGHT);
-        mainMatrix[2][0] = new Square(BLACK_BISHOP);
-        mainMatrix[3][0] = new Square(BLACK_QUEEN);
-        mainMatrix[4][0] = new Square(BLACK_KING);
-        mainMatrix[5][0] = new Square(BLACK_BISHOP);
-        mainMatrix[6][0] = new Square(BLACK_KNIGHT);
-        mainMatrix[7][0] = new Square(BLACK_ROOK);
+        list.addAll(loadListOfSquare(0, BLACK_ROOK, BLACK_KNIGHT, BLACK_BISHOP, BLACK_QUEEN, BLACK_KING, BLACK_BISHOP, BLACK_KNIGHT, BLACK_ROOK));
+        list.addAll(loadListOfSquare(1, BLACK_PAWN));
 
-        mainMatrix[0][1] = new Square(BLACK_PAWN);
-        mainMatrix[1][1] = new Square(BLACK_PAWN);
-        mainMatrix[2][1] = new Square(BLACK_PAWN);
-        mainMatrix[3][1] = new Square(BLACK_PAWN);
-        mainMatrix[4][1] = new Square(BLACK_PAWN);
-        mainMatrix[5][1] = new Square(BLACK_PAWN);
-        mainMatrix[6][1] = new Square(BLACK_PAWN);
-        mainMatrix[7][1] = new Square(BLACK_PAWN);
+        list.addAll(loadListOfSquare(7, WHITE_ROOK, WHITE_KNIGHT, WHITE_BISHOP, WHITE_QUEEN, WHITE_KING, WHITE_BISHOP, WHITE_KNIGHT, WHITE_ROOK));
+        list.addAll(loadListOfSquare(6, WHITE_PAWN));
 
-        for (int i = 0; i < 8; i++) { //fare funzione di update
-            for (int j = 0; j < 8; j++) {
-                Square square = mainMatrix[i][j];
+        chessBoard.loadSquares(list);
+        chessBoard.fillSquares();
+        chessBoard.updateMainMatrix();
+    }
 
-                if (square != null) {
-                    square.getPiece().getImage().updatePosition(i, j);
+    private static List<Square> loadListOfSquare(int max, Piece... pieces) {
+        List<Square> list = new ArrayList<>();
+
+        for(int i = 0; i < 8; i++) {
+            list.add(new Square(pieces.length == 1 ? pieces[0] : pieces[i], i, max));
+        }
+
+        return list;
+    }
+
+    private void registerEvents() {
+        EventHandler<MouseEvent> eventHandler = new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent e) {
+                if(e.getSource() instanceof Pane) {
+                    Pane pane = (Pane) e.getSource();
+
+                    if(!ChessEliteHelper.isCorrectSquare(pane.getId()))
+                        return;
+
+                    int[] dim = ChessEliteHelper.getIDFromPane(pane.getId());
+                    Square square = ChessEliteHelper.getSquareFromPane(pane.getId(), dim);
+
+                    if(square.isEmpty()) {
+                        
+                    } else if(square.isWhite()) {
+                        square.showMoves(dim[0], dim[1]);
+                    }
+
+//                    ((ImageView)pane.getChildren().get(0)).setImage(new PieceImage("white_king.png").getImage());
                 }
             }
+        };
+
+        for (Node node : getChessBoard().getMainBoard().getChildren()) {
+            node.addEventFilter(MouseEvent.MOUSE_CLICKED, eventHandler);
         }
     }
 }

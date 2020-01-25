@@ -1,5 +1,7 @@
 package it.evermine.chesselite;
 
+import it.evermine.chesselite.chess.Piece;
+import it.evermine.chesselite.chess.Square;
 import javafx.scene.Node;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
@@ -59,10 +61,10 @@ public class ChessEliteHelper {
     }
 
     public static Pane getPaneFromPosition(int x, int y) {
-        final String toSearch = "pane_"+x+"_"+y;
+        final String toSearch = "square_"+x+"_"+y;
 
-        for (Node child : ChessEliteCore.getGuiChessBoard().getChildren()) {
-            if(child.getId().equals(toSearch))
+        for (Node child : ChessEliteCore.getChessBoard().getMainBoard().getChildren()) {
+            if(child.getId() != null && child.getId().equals(toSearch))
                 return (Pane) child;
         }
 
@@ -75,5 +77,29 @@ public class ChessEliteHelper {
 
     public static ImageView getImageViewFromPosition(int x, int y) {
         return getImageViewFromPane(getPaneFromPosition(x, y));
+    }
+
+    public static Integer[][] getMoves(Square square, int x, int y) {
+        if(square.isEmpty())
+            return null;
+
+        return square.getPiece().getMoves(x, y);
+    }
+
+    public static boolean isCorrectSquare(String id) {
+        return id.startsWith("square_");
+    }
+
+    public static Square getSquareFromPane(String id, int[] dim) {
+        return ChessEliteCore.getChessBoard().getMainMatrix()[dim[0]][dim[1]];
+    }
+
+    public static Square getSquareFromPane(String id) {
+        return getSquareFromPane(id, getIDFromPane(id));
+    }
+
+    public static int[] getIDFromPane(String id) {//square_1_1
+        String[] splitted = id.split("_");
+        return new int[]{Integer.parseInt(splitted[1]), Integer.parseInt(splitted[2])};
     }
 }

@@ -17,6 +17,16 @@ public class Queen implements Piece {
     }
 
     @Override
+    public boolean canMoves(int x, int y) {
+        return false;
+    }
+
+    @Override
+    public Integer[][] getMoves(int x, int y) {
+        return new Integer[0][];
+    }
+
+    @Override
     public boolean isBlack() {
         return !isWhite();
     }

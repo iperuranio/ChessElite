@@ -4,6 +4,10 @@ import it.evermine.chesselite.chess.images.PieceImage;
 import it.evermine.chesselite.chess.pieces.Pieces;
 
 public interface Piece {
+    boolean canMoves(int x, int y);
+
+    Integer[][] getMoves(int x, int y);
+
     PieceImage getImage();
 
     boolean isWhite();

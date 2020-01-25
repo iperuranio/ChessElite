@@ -25,7 +25,6 @@ public class PieceImage {
     }
 
     private void load() {
-
         BufferedImage bufferedImage = null;
         try {
             bufferedImage = ImageIO.read(getClass().getResource(path));

@@ -66,259 +66,259 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Pane fx:id="pane_1_7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                        <Pane fx:id="square_1_7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="7">
                          <children>
                              <ImageView fx:id="image_1_7" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                          </children></Pane>
-                        <Pane fx:id="pane_3_7" layoutX="109.0" layoutY="709.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                        <Pane fx:id="square_3_7" layoutX="109.0" layoutY="709.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="7">
                             <children>
                                 <ImageView fx:id="image_3_7" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_7_7" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="7" >
+                        <Pane fx:id="square_7_7" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="7" >
                             <children>
                                 <ImageView fx:id="image_7_7" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_2_0" layoutX="708.0" layoutY="709.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="2" >
+                        <Pane fx:id="square_2_0" layoutX="708.0" layoutY="709.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="2" >
                             <children>
                                 <ImageView fx:id="image_2_0" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_5_7" layoutX="308.0" layoutY="709.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="7">
+                        <Pane fx:id="square_5_7" layoutX="308.0" layoutY="709.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="7">
                             <children>
                                 <ImageView fx:id="image_5_7" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_2_6" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                        <Pane fx:id="square_2_6" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="6">
                             <children>
                                 <ImageView fx:id="image_2_6" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_0_6" layoutX="208.0" layoutY="610.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.rowIndex="6">
+                        <Pane fx:id="square_0_6" layoutX="208.0" layoutY="610.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.rowIndex="6">
                             <children>
                                 <ImageView fx:id="image_0_6" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_0_4" layoutX="10.0" layoutY="610.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.rowIndex="4">
+                        <Pane fx:id="square_0_4" layoutX="10.0" layoutY="610.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.rowIndex="4">
                             <children>
                                 <ImageView fx:id="image_0_4" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_1_1" layoutX="10.0" layoutY="410.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <Pane fx:id="square_1_1" layoutX="10.0" layoutY="410.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                             <children>
                                 <ImageView fx:id="image_1_1" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_0_2" layoutX="10.0" layoutY="210.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.rowIndex="2">
+                        <Pane fx:id="square_0_2" layoutX="10.0" layoutY="210.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.rowIndex="2">
                             <children>
                                 <ImageView fx:id="image_0_2" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_4_0" layoutX="208.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="4">
+                        <Pane fx:id="square_4_0" layoutX="208.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="4">
                             <children>
                                 <ImageView fx:id="image_4_0" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_2_2" layoutX="109.0" layoutY="110.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                        <Pane fx:id="square_2_2" layoutX="109.0" layoutY="110.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="2">
                             <children>
                                 <ImageView fx:id="image_2_2" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_3_3" layoutX="208.0" layoutY="210.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                        <Pane fx:id="square_3_3" layoutX="208.0" layoutY="210.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="3">
                             <children>
                                 <ImageView fx:id="image_3_3" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_1_3" layoutX="109.0" layoutY="310.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <Pane fx:id="square_1_3" layoutX="109.0" layoutY="310.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="3">
                             <children>
                                 <ImageView fx:id="image_1_3" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_3_1" layoutX="109.0" layoutY="310.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                        <Pane fx:id="square_3_1" layoutX="109.0" layoutY="310.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="1">
                             <children>
                                 <ImageView fx:id="image_3_1" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_0_0" layoutX="408.0" layoutY="10.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: white;">
+                        <Pane fx:id="square_0_0" layoutX="408.0" layoutY="10.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: white;">
                             <children>
                                 <ImageView fx:id="image_0_0" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_6_0" layoutX="408.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="6">
+                        <Pane fx:id="square_6_0" layoutX="408.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="6">
                             <children>
                                 <ImageView fx:id="image_6_0" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_5_1" layoutX="608.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                        <Pane fx:id="square_5_1" layoutX="608.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="1">
                             <children>
                                 <ImageView fx:id="image_5_1" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_6_2" layoutX="508.0" layoutY="110.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                        <Pane fx:id="square_6_2" layoutX="508.0" layoutY="110.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="6" GridPane.rowIndex="2">
                             <children>
                                 <ImageView fx:id="image_6_2" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_7_1" layoutX="608.0" layoutY="210.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                        <Pane fx:id="square_7_1" layoutX="608.0" layoutY="210.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="1">
                             <children>
                                 <ImageView fx:id="image_7_1" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_4_2" layoutX="708.0" layoutY="110.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                        <Pane fx:id="square_4_2" layoutX="708.0" layoutY="110.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="2">
                             <children>
                                 <ImageView fx:id="image_4_2" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_5_3" layoutX="408.0" layoutY="210.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                        <Pane fx:id="square_5_3" layoutX="408.0" layoutY="210.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="3">
                             <children>
                                 <ImageView fx:id="image_5_3" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_7_3" layoutX="508.0" layoutY="310.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="3">
+                        <Pane fx:id="square_7_3" layoutX="508.0" layoutY="310.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="3">
                             <children>
                                 <ImageView fx:id="image_7_3" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_2_4" layoutX="708.0" layoutY="310.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                        <Pane fx:id="square_2_4" layoutX="708.0" layoutY="310.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="4">
                             <children>
                                 <ImageView fx:id="image_2_4" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_1_5" layoutX="208.0" layoutY="410.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                        <Pane fx:id="square_1_5" layoutX="208.0" layoutY="410.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="5">
                             <children>
                                 <ImageView fx:id="image_1_5" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_3_5" layoutX="109.0" layoutY="510.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                        <Pane fx:id="square_3_5" layoutX="109.0" layoutY="510.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="5">
                             <children>
                                 <ImageView fx:id="image_3_5" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_4_4" layoutX="308.0" layoutY="510.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                        <Pane fx:id="square_4_4" layoutX="308.0" layoutY="510.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="4">
                             <children>
                                 <ImageView fx:id="image_4_4" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_5_5" layoutX="408.0" layoutY="410.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                        <Pane fx:id="square_5_5" layoutX="408.0" layoutY="410.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="5">
                             <children>
                                 <ImageView fx:id="image_5_5" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_6_4" layoutX="508.0" layoutY="510.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="6" GridPane.rowIndex="4">
+                        <Pane fx:id="square_6_4" layoutX="508.0" layoutY="510.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="6" GridPane.rowIndex="4">
                             <children>
                                 <ImageView fx:id="image_6_4" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_7_5" layoutX="608.0" layoutY="410.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="5">
+                        <Pane fx:id="square_7_5" layoutX="608.0" layoutY="410.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="5">
                             <children>
                                 <ImageView fx:id="image_7_5" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_4_6" layoutX="708.0" layoutY="510.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                        <Pane fx:id="square_4_6" layoutX="708.0" layoutY="510.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="6">
                             <children>
                                 <ImageView fx:id="image_4_6" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_6_6" layoutX="408.0" layoutY="610.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="6" GridPane.rowIndex="6">
+                        <Pane fx:id="square_6_6" layoutX="408.0" layoutY="610.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="6" GridPane.rowIndex="6">
                             <children>
                                 <ImageView fx:id="image_6_6" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_0_1" layoutX="109.0" layoutY="709.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #666666;" GridPane.rowIndex="1">
+                        <Pane fx:id="square_0_1" layoutX="109.0" layoutY="709.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #666666;" GridPane.rowIndex="1">
                             <children>
                                 <ImageView fx:id="image_0_1" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_1_0" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="1">
+                        <Pane fx:id="square_1_0" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="1">
                             <children>
                                 <ImageView fx:id="image_1_0" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_5_0" layoutX="109.0" layoutY="10.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="5">
+                        <Pane fx:id="square_5_0" layoutX="109.0" layoutY="10.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="5">
                             <children>
                                 <ImageView fx:id="image_5_0" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_3_0" layoutX="508.0" layoutY="10.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="3">
+                        <Pane fx:id="square_3_0" layoutX="508.0" layoutY="10.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="3">
                             <children>
                                 <ImageView fx:id="image_3_0" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_7_0" layoutX="308.0" layoutY="10.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="7">
+                        <Pane fx:id="square_7_0" layoutX="308.0" layoutY="10.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="7">
                             <children>
                                 <ImageView fx:id="image_7_0" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_2_1" layoutX="708.0" layoutY="10.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                        <Pane fx:id="square_2_1" layoutX="708.0" layoutY="10.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="2" GridPane.rowIndex="1">
                             <children>
                                 <ImageView fx:id="image_2_1" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_4_1" layoutX="208.0" layoutY="110.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                        <Pane fx:id="square_4_1" layoutX="208.0" layoutY="110.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="4" GridPane.rowIndex="1">
                             <children>
                                 <ImageView fx:id="image_4_1" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_6_1" layoutX="408.0" layoutY="110.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                        <Pane fx:id="square_6_1" layoutX="408.0" layoutY="110.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="6" GridPane.rowIndex="1">
                             <children>
                                 <ImageView fx:id="image_6_1" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_1_2" layoutX="608.0" layoutY="110.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <Pane fx:id="square_1_2" layoutX="608.0" layoutY="110.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="1" GridPane.rowIndex="2">
                             <children>
                                 <ImageView fx:id="image_1_2" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_3_2" layoutX="109.0" layoutY="210.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                        <Pane fx:id="square_3_2" layoutX="109.0" layoutY="210.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="3" GridPane.rowIndex="2">
                             <children>
                                 <ImageView fx:id="image_3_2" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_5_2" layoutX="308.0" layoutY="210.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                        <Pane fx:id="square_5_2" layoutX="308.0" layoutY="210.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="5" GridPane.rowIndex="2">
                             <children>
                                 <ImageView fx:id="image_5_2" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_7_2" layoutX="508.0" layoutY="210.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                        <Pane fx:id="square_7_2" layoutX="508.0" layoutY="210.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="7" GridPane.rowIndex="2">
                             <children>
                                 <ImageView fx:id="image_7_2" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_0_3" layoutX="708.0" layoutY="210.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.rowIndex="3">
+                        <Pane fx:id="square_0_3" layoutX="708.0" layoutY="210.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.rowIndex="3">
                             <children>
                                 <ImageView fx:id="image_0_3" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_2_3" layoutX="10.0" layoutY="310.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                        <Pane fx:id="square_2_3" layoutX="10.0" layoutY="310.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="2" GridPane.rowIndex="3">
                             <children>
                                 <ImageView fx:id="image_2_3" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_4_3" layoutX="208.0" layoutY="310.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="4" GridPane.rowIndex="3" >
+                        <Pane fx:id="square_4_3" layoutX="208.0" layoutY="310.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="4" GridPane.rowIndex="3" >
                             <children>
                                 <ImageView fx:id="image_4_3" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_6_3" layoutX="408.0" layoutY="310.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                        <Pane fx:id="square_6_3" layoutX="408.0" layoutY="310.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="6" GridPane.rowIndex="3">
                             <children>
                                 <ImageView fx:id="image_6_3" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_1_4" layoutX="608.0" layoutY="310.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="1" GridPane.rowIndex="4" >
+                        <Pane fx:id="square_1_4" layoutX="608.0" layoutY="310.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="1" GridPane.rowIndex="4" >
                             <children>
                                 <ImageView fx:id="image_1_4" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_3_4" layoutX="109.0" layoutY="410.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="3" GridPane.rowIndex="4" >
+                        <Pane fx:id="square_3_4" layoutX="109.0" layoutY="410.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="3" GridPane.rowIndex="4" >
                             <children>
                                 <ImageView fx:id="image_3_4" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_5_4" layoutX="308.0" layoutY="410.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                        <Pane fx:id="square_5_4" layoutX="308.0" layoutY="410.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="5" GridPane.rowIndex="4">
                             <children>
                                 <ImageView fx:id="image_5_4" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_7_4" layoutX="508.0" layoutY="410.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="7" GridPane.rowIndex="4">
+                        <Pane fx:id="square_7_4" layoutX="508.0" layoutY="410.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="7" GridPane.rowIndex="4">
                             <children>
                                 <ImageView fx:id="image_7_4" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_0_5" layoutX="708.0" layoutY="410.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.rowIndex="5">
+                        <Pane fx:id="square_0_5" layoutX="708.0" layoutY="410.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.rowIndex="5">
                             <children>
                                 <ImageView fx:id="image_0_5" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_2_5" layoutX="10.0" layoutY="510.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                        <Pane fx:id="square_2_5" layoutX="10.0" layoutY="510.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="2" GridPane.rowIndex="5">
                             <children>
                                 <ImageView fx:id="image_2_5" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_4_5" layoutX="208.0" layoutY="510.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                        <Pane fx:id="square_4_5" layoutX="208.0" layoutY="510.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="4" GridPane.rowIndex="5">
                             <children>
                                 <ImageView fx:id="image_4_5" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_6_5" layoutX="408.0" layoutY="510.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="6" GridPane.rowIndex="5">
+                        <Pane fx:id="square_6_5" layoutX="408.0" layoutY="510.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="6" GridPane.rowIndex="5">
                             <children>
                                 <ImageView fx:id="image_6_5" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_1_6" layoutX="608.0" layoutY="510.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                        <Pane fx:id="square_1_6" layoutX="608.0" layoutY="510.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="1" GridPane.rowIndex="6">
                             <children>
                                 <ImageView fx:id="image_1_6" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_3_6" layoutX="109.0" layoutY="610.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                        <Pane fx:id="square_3_6" layoutX="109.0" layoutY="610.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="3" GridPane.rowIndex="6">
                             <children>
                                 <ImageView fx:id="image_3_6" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_5_6" layoutX="308.0" layoutY="610.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="5" GridPane.rowIndex="6">
+                        <Pane fx:id="square_5_6" layoutX="308.0" layoutY="610.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="5" GridPane.rowIndex="6">
                             <children>
                                 <ImageView fx:id="image_5_6" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_7_6" layoutX="508.0" layoutY="610.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="7" GridPane.rowIndex="6">
+                        <Pane fx:id="square_7_6" layoutX="508.0" layoutY="610.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="7" GridPane.rowIndex="6">
                             <children>
                                 <ImageView fx:id="image_7_6" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_0_7" layoutX="708.0" layoutY="610.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.rowIndex="7">
+                        <Pane fx:id="square_0_7" layoutX="708.0" layoutY="610.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.rowIndex="7">
                             <children>
                                 <ImageView fx:id="image_0_7" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_2_7" layoutX="10.0" layoutY="709.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                        <Pane fx:id="square_2_7" layoutX="10.0" layoutY="709.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="2" GridPane.rowIndex="7">
                             <children>
                                 <ImageView fx:id="image_2_7" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_4_7" layoutX="208.0" layoutY="709.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="4" GridPane.rowIndex="7">
+                        <Pane fx:id="square_4_7" layoutX="208.0" layoutY="709.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="4" GridPane.rowIndex="7">
                             <children>
                                 <ImageView fx:id="image_4_7" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
-                        <Pane fx:id="pane_6_7" layoutX="408.0" layoutY="709.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="6" GridPane.rowIndex="7">
+                        <Pane fx:id="square_6_7" layoutX="408.0" layoutY="709.0" prefHeight="200.0" prefWidth="163.0" style="-fx-background-color: #666666;" GridPane.columnIndex="6" GridPane.rowIndex="7">
                             <children>
                                 <ImageView fx:id="image_6_7" fitHeight="68.0" fitWidth="68.0" layoutX="17.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
                             </children></Pane>
