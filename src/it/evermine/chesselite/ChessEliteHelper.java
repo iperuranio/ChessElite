@@ -1,5 +1,6 @@
 package it.evermine.chesselite;
 
+import it.evermine.chesselite.chess.AvailableMoves;
 import it.evermine.chesselite.chess.Piece;
 import it.evermine.chesselite.chess.Square;
 import javafx.scene.Node;
@@ -79,11 +80,11 @@ public class ChessEliteHelper {
         return getImageViewFromPane(getPaneFromPosition(x, y));
     }
 
-    public static Integer[][] getMoves(Square square, int x, int y) {
+    public static AvailableMoves getMoves(Square square) {
         if(square.isEmpty())
             return null;
 
-        return square.getPiece().getMoves(x, y);
+        return square.getPiece().getMoves(square);
     }
 
     public static boolean isCorrectSquare(String id) {
@@ -101,5 +102,26 @@ public class ChessEliteHelper {
     public static int[] getIDFromPane(String id) {//square_1_1
         String[] splitted = id.split("_");
         return new int[]{Integer.parseInt(splitted[1]), Integer.parseInt(splitted[2])};
+    }
+
+    public static Square getSquare(int i, int j) {
+        return ChessEliteCore.getChessBoard().getMainMatrix()[i][j];
+    }
+
+    public static boolean isWhiteSquare(int x, int y) { //2 6
+        if(x == y)
+            return true;
+
+        if(y == 0 || y % 2 == 0) {
+            if(x == 0 || x % 2 == 0) {
+                return true;
+            }
+        } else {
+            if(x != 0 && x % 2 != 0) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

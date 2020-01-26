@@ -26,6 +26,8 @@ import java.util.concurrent.TimeUnit;
 
 public class ChessEliteCore extends Application {
     @Getter
+    private static boolean whiteTourn = true;
+    @Getter
     private static ChessBoard chessBoard;
     @Getter
     private static Scene mainScene;
@@ -88,7 +90,7 @@ public class ChessEliteCore extends Application {
         List<Square> list = new ArrayList<>();
 
         for(int i = 0; i < 8; i++) {
-            list.add(new Square(pieces.length == 1 ? pieces[0] : pieces[i], i, max));
+            list.add(new Square((pieces.length == 1 ? pieces[0] : pieces[i]).cloneObject(), i, max));
         }
 
         return list;
@@ -105,12 +107,12 @@ public class ChessEliteCore extends Application {
                         return;
 
                     int[] dim = ChessEliteHelper.getIDFromPane(pane.getId());
-                    Square square = ChessEliteHelper.getSquareFromPane(pane.getId(), dim);
+                    Square clickedSquare = ChessEliteHelper.getSquareFromPane(pane.getId(), dim);
 
-                    if(square.isEmpty()) {
-                        
-                    } else if(square.isWhite()) {
-                        square.showMoves(dim[0], dim[1]);
+                    if(clickedSquare.isEmpty()) {
+                        makeMove(clickedSquare);
+                    } else {
+                        checkOnPiece(clickedSquare);
                     }
 
 //                    ((ImageView)pane.getChildren().get(0)).setImage(new PieceImage("white_king.png").getImage());
@@ -120,6 +122,36 @@ public class ChessEliteCore extends Application {
 
         for (Node node : getChessBoard().getMainBoard().getChildren()) {
             node.addEventFilter(MouseEvent.MOUSE_CLICKED, eventHandler);
+        }
+    }
+
+    public void changeTourn() {
+        whiteTourn = !whiteTourn;
+    }
+
+    private void makeMove(Square clickedSquare) {
+        Square requestedSquare = getChessBoard().isAvailableMove(clickedSquare);
+
+        getChessBoard().clearPreviousMoves();
+        getChessBoard().clearPreviousAvailableMoves();
+
+        if(requestedSquare != null) {
+            clickedSquare.move(requestedSquare);
+            changeTourn();
+        }
+    }
+
+    private void checkOnPiece(Square clickedSquare) {
+        if(clickedSquare.isWhite()) {
+            if(isWhiteTourn())
+                clickedSquare.showPieceMoves();
+            else
+                makeMove(clickedSquare);
+        } else {
+            if(isWhiteTourn())
+                makeMove(clickedSquare);
+            else
+                clickedSquare.showPieceMoves();
         }
     }
 }

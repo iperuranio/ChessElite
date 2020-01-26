@@ -1,5 +1,7 @@
 package it.evermine.chesselite;
 
+import it.evermine.chesselite.chess.AvailableMoves;
+import it.evermine.chesselite.chess.Piece;
 import it.evermine.chesselite.chess.Square;
 import javafx.scene.layout.GridPane;
 import lombok.Getter;
@@ -16,27 +18,27 @@ public class ChessBoard {
     @Getter
     private Square[][] mainMatrix;
     @Getter
-    private Integer[][] previousMoves;
+    private AvailableMoves previousMoves;
 
     public ChessBoard(GridPane mainBoard, Square[][] mainMatrix) {
         this.mainBoard = mainBoard;
         this.mainMatrix = mainMatrix;
     }
 
-    public void drawMoves(Integer[][] dim) {
-        for (int i = 0; i < dim[0].length; i++) {
-            for(int j = 0; j < dim[1].length; j++) {
-                mainMatrix[i][j].color();
-            }
-        }
+    public void drawMoves(AvailableMoves moves) {
+        clearPreviousMoves();
+
+        moves.showMoves();
+        previousMoves = moves;
     }
 
-    public void clearMoves(Integer[][] dim) {
-        for (int i = 0; i < dim[0].length; i++) {
-            for(int j = 0; j < dim[1].length; j++) {
-                mainMatrix[i][j].removeColor();
-            }
-        }
+    public void clearPreviousMoves() {
+        if(previousMoves != null)
+            clearMoves(previousMoves);
+    }
+
+    public void clearMoves(AvailableMoves moves) {
+        moves.clearMoves();
     }
 
     public void loadSquare(Square s) {
@@ -76,11 +78,23 @@ public class ChessBoard {
         }
     }
 
-    private void runMatrixSquare(Consumer<Square> function) {
+    private void runMatrixFunction(Consumer<Square> function) {
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 function.accept(mainMatrix[i][j]);
             }
         }
+    }
+
+    public Square isAvailableMove(Square square) {
+        if(previousMoves != null && previousMoves.containsMove(square.getId())) {
+            return previousMoves.getStartingSquare();
+        }
+
+        return null;
+    }
+
+    public void clearPreviousAvailableMoves() {
+        previousMoves = null;
     }
 }

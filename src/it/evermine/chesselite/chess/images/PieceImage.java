@@ -1,5 +1,6 @@
 package it.evermine.chesselite.chess.images;
 
+import com.sun.javafx.css.Stylesheet;
 import it.evermine.chesselite.ChessEliteCore;
 import it.evermine.chesselite.ChessEliteHelper;
 import javafx.embed.swing.SwingFXUtils;
@@ -37,5 +38,17 @@ public class PieceImage {
 
     public void updatePosition(int x, int y) {
         ChessEliteHelper.getImageViewFromPosition(x, y).setImage(image);
+    }
+
+    public void clearImage(int x, int y) {
+        ChessEliteHelper.getImageViewFromPosition(x, y).setImage(null);
+    }
+
+    public void blueGround(Pane pane) {
+        pane.setStyle("-fx-background-color: #80d7ff;");
+    }
+
+    public void resetGround(int x, int y) {
+        ChessEliteHelper.getPaneFromPosition(x, y).setStyle("-fx-background-color: "+(ChessEliteHelper.isWhiteSquare(x, y) ? "white" : "#666666")+";");
     }
 }
