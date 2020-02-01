@@ -48,22 +48,19 @@ public class Pawn implements Piece {
         AvailableMoves moves = new AvailableMoves();
         List<Square> squares = new ArrayList<>();
 
-        int decrementMinusOne = square.isWhite() ? -1 : +1;
-        int decrementMinusTwo = square.isWhite() ? -2 : +2;
-
         if(!square.isRightCorner()) {
-            squares.add(ChessEliteHelper.getSquare(square.getX() + 1, square.getY() + decrementMinusOne));
+            squares.add(ChessEliteHelper.getSquare(square.getX() + 1, square.getY() -1));
         }
 
         if(!square.isLeftCorner()) {
-            squares.add(ChessEliteHelper.getSquare(square.getX() - 1, square.getY() + decrementMinusOne));
+            squares.add(ChessEliteHelper.getSquare(square.getX() - 1, square.getY() -1));
         }
 
         if(!isUsed()) {
-            squares.add(ChessEliteHelper.getSquare(square.getX(), square.getY() + decrementMinusTwo));
+            squares.add(ChessEliteHelper.getSquare(square.getX(), square.getY() -2));
         }
 
-        squares.add(ChessEliteHelper.getSquare(square.getX(), square.getY() + decrementMinusOne));
+        squares.add(ChessEliteHelper.getSquare(square.getX(), square.getY() -1));
 
         moves.setMoves(squares);
         moves.generateMoves(square, true);

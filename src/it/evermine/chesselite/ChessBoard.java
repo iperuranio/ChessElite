@@ -3,9 +3,11 @@ package it.evermine.chesselite;
 import it.evermine.chesselite.chess.AvailableMoves;
 import it.evermine.chesselite.chess.Piece;
 import it.evermine.chesselite.chess.Square;
+import it.evermine.chesselite.chess.images.PieceImage;
 import javafx.scene.layout.GridPane;
 import lombok.Getter;
 
+import java.io.Console;
 import java.util.Collection;
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
@@ -33,8 +35,13 @@ public class ChessBoard {
     }
 
     public void clearPreviousMoves() {
-        if(previousMoves != null)
+        if(existsPreviousMoves())
             clearMoves(previousMoves);
+    }
+
+    public void clearAndRemoveFromScreenMoves() {
+        clearPreviousMoves();
+        clearPreviousAvailableMoves();
     }
 
     public void clearMoves(AvailableMoves moves) {
@@ -58,6 +65,8 @@ public class ChessBoard {
 
                 if (square != null && !square.isEmpty()) {
                     square.getPiece().getImage().updatePosition(i, j);
+                } else {
+                    PieceImage.clearImage(i, j);
                 }
             }
         }
@@ -70,7 +79,7 @@ public class ChessBoard {
         });
     }
 
-    private void runMatrixBiFunction(BiConsumer<Integer, Integer> function) {
+    public void runMatrixBiFunction(BiConsumer<Integer, Integer> function) {
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 function.accept(i, j);
@@ -78,7 +87,7 @@ public class ChessBoard {
         }
     }
 
-    private void runMatrixFunction(Consumer<Square> function) {
+    public void runMatrixFunction(Consumer<Square> function) {
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 function.accept(mainMatrix[i][j]);
@@ -86,8 +95,26 @@ public class ChessBoard {
         }
     }
 
+    public void runArrayFunction(Consumer<Integer> function) {
+        for (int i = 0; i < 8; i++) {
+            function.accept(i);
+        }
+    }
+
+    public void runCrescentForWithMinusFunction(int starting, int exit, Consumer<Integer> function) {
+        for (int i = starting; i < exit; i++) {
+            function.accept(i);
+        }
+    }
+
+    public void runDecrescentForWithEqualsFunction(int starting, int exit, Consumer<Integer> function) {
+        for (int i = starting; i == exit; i++) {
+            function.accept(i);
+        }
+    }
+
     public Square isAvailableMove(Square square) {
-        if(previousMoves != null && previousMoves.containsMove(square.getId())) {
+        if(existsPreviousMoves() && previousMoves.containsMove(square.getId())) {
             return previousMoves.getStartingSquare();
         }
 
@@ -96,5 +123,32 @@ public class ChessBoard {
 
     public void clearPreviousAvailableMoves() {
         previousMoves = null;
+    }
+
+    public boolean existsPreviousMoves() {
+        return previousMoves != null;
+    }
+
+    public boolean isInternal(int x, int y) {
+        return x >= 0 && x <= 7 && y >= 0 && y <= 7;
+    }
+
+    public void flip() {
+        int totalX = mainMatrix[0].length;
+        int totalY = mainMatrix[1].length;
+
+        for (int x = 0; x < totalX; x++) {
+            for (int y = 0; y < totalY/2; y++) {
+                Square tmp = mainMatrix[x][totalY - y - 1];
+                mainMatrix[x][totalY - y - 1] = mainMatrix[x][y];
+                mainMatrix[x][y] = tmp;
+            }
+        }
+    }
+
+    public void updateSquares() {
+        runMatrixBiFunction((x, y) -> {
+            ChessEliteHelper.getSquare(x, y).updateCoordinates(x, y);
+        });
     }
 }

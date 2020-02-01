@@ -15,10 +15,10 @@ public class Square {
 
     @Getter
     public long id;
-    @Getter
-    private final int X;
-    @Getter
-    private final int Y;
+    @Getter @Setter
+    private int X;
+    @Getter @Setter
+    private int Y;
     @Getter @Setter
     private Piece piece;
     @Getter
@@ -70,8 +70,19 @@ public class Square {
         return piece.isWhite();
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == null)
+            return false;
+        if(obj instanceof Square) {
+            return ((Square) obj).getId() == id;
+        } else return false;
+    }
+
     public void showPieceMoves() {
-        ChessEliteCore.getChessBoard().drawMoves(piece.getMoves(this));
+        if(ChessEliteCore.getChessBoard().existsPreviousMoves() && ChessEliteCore.getChessBoard().getPreviousMoves().getStartingSquare().equals(this)) {
+            ChessEliteCore.getChessBoard().clearAndRemoveFromScreenMoves();
+        } else ChessEliteCore.getChessBoard().drawMoves(piece.getMoves(this));
     }
 
     public void color() {
@@ -88,22 +99,76 @@ public class Square {
 
     public boolean canMove(Square s) { //casella s -> qui
         if(isEmpty()) {
-            if(s.getPiece().isPawn() && isPawnSided(s)) {
-                return false;
-            } else {
-                return true;
+            if(s.getPiece().isPawn()) {
+                if(isPawnSided(s)) {
+                    return false;
+                } else if(verticalXRayCheck(s)) {
+                    return false;
+                }
             }
+
+            return true;
         } else {
+            System.out.println(piece.getName());
             if(areEnemies(s) && !piece.isKing()) {
+                if(s.getPiece().isPawn()) {
+                    if(s.getX() == X) {
+                        return false;
+                    }
+                }
                 return true;
             } else {
+                if(piece.isKing()) {
+                    return false;
+                }
+
                 return false;
             }
         }
     }
 
+    private boolean horizontalCheck(Square s) {
+        return true;
+    }
+
+    public boolean verticalXRayCheck(Square s) {
+        if(!verticalCheck(s) || s.getY() == Y) {
+            return false;
+        }
+//        System.out.println("\n");
+//        System.out.println("Punto che si vuole muovere: "+s.getX()+" "+s.getY()+" | Punto di arrivo: "+X+" "+Y);
+        int yMin = s.getY() < Y ? s.getY() : Y;
+
+//        System.out.println("y = "+yMin+" y < "+(Math.abs(s.getY() - Y) + (yMin + (s.isWhite() ? + 0 : -1)))+" y++");
+        for(int i = yMin; i < Math.abs(s.getY() - Y) + yMin; i++) {
+            if(i > 7) {
+//                System.out.println("La casella "+X+" "+i+" è non è interna");
+                break;
+            }
+
+//            System.out.println("La casella "+X+" "+i+" è piena? "+!getSquare(X, i).isEmpty());
+            if(!getSquare(X, i).isEmpty()) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private Square getSquare(int x, int y) {
+        return ChessEliteHelper.getSquare(x, y);
+    }
+
+    public boolean verticalCheck(Square s) {
+        return X == s.getX();
+    }
+
+    public boolean verticalPawnCheck(Square s) {
+        return Y < s.getY();
+    }
+
     public boolean isPawnSided(Square s) {
-        return s.getX() != X && (s.isWhite() ? Y < s.getY() : Y > s.getY());
+        return s.getX() != X && verticalPawnCheck(s);
     }
 
     public Pane getElement() {
@@ -119,13 +184,13 @@ public class Square {
 
     private void removeImage() {
         if(isEmpty())
-            image.clearImage(X, Y);
+            PieceImage.clearImage(X, Y);
         else
-            image.resetGround(X, Y);
+            PieceImage.resetGround(X, Y);
     }
 
     public void move(Square requestedSquare) {
-        requestedSquare.getPiece().getImage().clearImage(requestedSquare.getX(), requestedSquare.getY());
+        PieceImage.clearImage(requestedSquare.getX(), requestedSquare.getY());
         if(!isEmpty())
             piece.getImage().clearImage(X, Y);
 
@@ -137,5 +202,9 @@ public class Square {
         if(!piece.isUsed()) {
             piece.setUsed(true);
         }
+    }
+
+    public void updateCoordinates(int x, int y) {
+        setX(x); setY(y);
     }
 }

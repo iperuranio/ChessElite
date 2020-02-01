@@ -19,11 +19,11 @@
       <menus>
         <Menu mnemonicParsing="false" text="File">
           <items>
-            <MenuItem mnemonicParsing="false" text="Nuova partita PvP" />
+            <MenuItem mnemonicParsing="false" text="Nuova partita PvP (non disponibile)" />
             <MenuItem mnemonicParsing="false" text="Nuova partita PvE" />
             <SeparatorMenuItem mnemonicParsing="false" />
                   <MenuItem mnemonicParsing="false" text="Annulla mossa" />
-            <MenuItem mnemonicParsing="false" text="Ruota scacchiera" />
+            <MenuItem mnemonicParsing="false" text="Ruota scacchiera (non disponibile)" />
             <MenuItem mnemonicParsing="false" text="Ripristina scacchiera" />
             <MenuItem mnemonicParsing="false" text="Suggerimento" />
             <SeparatorMenuItem mnemonicParsing="false" />

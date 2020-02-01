@@ -1,5 +1,6 @@
 package it.evermine.chesselite.chess.pieces;
 
+import it.evermine.chesselite.ChessEliteHelper;
 import it.evermine.chesselite.chess.AvailableMoves;
 import it.evermine.chesselite.chess.Piece;
 import it.evermine.chesselite.chess.Square;
@@ -8,6 +9,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.lang.reflect.Constructor;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Queen implements Piece {
     @Getter
@@ -40,7 +43,16 @@ public class Queen implements Piece {
 
     @Override
     public AvailableMoves getMoves(Square square) {
-        return null;
+        AvailableMoves moves = new AvailableMoves();
+        List<Square> list = new ArrayList<>();
+
+        list.addAll(ChessEliteHelper.getAxes(square));
+        list.addAll(ChessEliteHelper.getDiagonals(square));
+
+        moves.setMoves(list);
+        moves.generateMoves(square, true);
+
+        return moves;
     }
 
     @Override

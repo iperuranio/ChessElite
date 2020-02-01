@@ -1,5 +1,7 @@
 package it.evermine.chesselite.chess.pieces;
 
+import it.evermine.chesselite.ChessEliteCore;
+import it.evermine.chesselite.ChessEliteHelper;
 import it.evermine.chesselite.chess.AvailableMoves;
 import it.evermine.chesselite.chess.Piece;
 import it.evermine.chesselite.chess.Square;
@@ -8,6 +10,10 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.lang.reflect.Constructor;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class Rook implements Piece {
     @Getter
@@ -40,7 +46,24 @@ public class Rook implements Piece {
 
     @Override
     public AvailableMoves getMoves(Square square) {
-        return null;
+        AvailableMoves moves = new AvailableMoves();
+
+//        ChessEliteCore.getChessBoard().runArrayFunction(y -> {
+//            if(squareY != y) {
+//                list.add(ChessEliteHelper.getSquare(squareX, y));
+//            }
+//        });
+//
+//        ChessEliteCore.getChessBoard().runArrayFunction(x -> {
+//            if(squareX != x) {
+//                list.add(ChessEliteHelper.getSquare(x, squareY));
+//            }
+//        });
+
+        moves.setMoves(ChessEliteHelper.getAxes(square));
+        moves.generateMoves(square, true);
+
+        return moves;
     }
 
     @Override

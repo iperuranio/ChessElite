@@ -70,8 +70,8 @@ public class ChessEliteCore extends Application {
         Piece WHITE_QUEEN = new Queen(new PieceImage("white_queen.png"), true);
         Piece BLACK_QUEEN = new Queen(new PieceImage("black_queen.png"), false);
 
-        Piece WHITE_KING = new Pawn(new PieceImage("white_king.png"), true);
-        Piece BLACK_KING = new Pawn(new PieceImage("black_king.png"), false);
+        Piece WHITE_KING = new King(new PieceImage("white_king.png"), true);
+        Piece BLACK_KING = new King(new PieceImage("black_king.png"), false);
 
         List<Square> list = new ArrayList<>();
 
@@ -127,13 +127,16 @@ public class ChessEliteCore extends Application {
 
     public void changeTourn() {
         whiteTourn = !whiteTourn;
+
+        chessBoard.flip();
+        chessBoard.updateSquares();
+        chessBoard.updateMainMatrix();
     }
 
     private void makeMove(Square clickedSquare) {
         Square requestedSquare = getChessBoard().isAvailableMove(clickedSquare);
 
-        getChessBoard().clearPreviousMoves();
-        getChessBoard().clearPreviousAvailableMoves();
+        getChessBoard().clearAndRemoveFromScreenMoves();
 
         if(requestedSquare != null) {
             clickedSquare.move(requestedSquare);

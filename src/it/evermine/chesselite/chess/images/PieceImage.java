@@ -40,7 +40,7 @@ public class PieceImage {
         ChessEliteHelper.getImageViewFromPosition(x, y).setImage(image);
     }
 
-    public void clearImage(int x, int y) {
+    public static void clearImage(int x, int y) {
         ChessEliteHelper.getImageViewFromPosition(x, y).setImage(null);
     }
 
@@ -48,7 +48,7 @@ public class PieceImage {
         pane.setStyle("-fx-background-color: #80d7ff;");
     }
 
-    public void resetGround(int x, int y) {
+    public static void resetGround(int x, int y) {
         ChessEliteHelper.getPaneFromPosition(x, y).setStyle("-fx-background-color: "+(ChessEliteHelper.isWhiteSquare(x, y) ? "white" : "#666666")+";");
     }
 }

@@ -10,6 +10,8 @@ import lombok.Getter;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ChessEliteHelper {
     public enum GUIS {
@@ -105,6 +107,8 @@ public class ChessEliteHelper {
     }
 
     public static Square getSquare(int i, int j) {
+        if(!ChessEliteCore.getChessBoard().isInternal(i, j))
+            return null;
         return ChessEliteCore.getChessBoard().getMainMatrix()[i][j];
     }
 
@@ -123,5 +127,250 @@ public class ChessEliteHelper {
         }
 
         return false;
+    }
+
+    public static List<Square> getAxes(Square square) {
+        List<Square> list = new ArrayList<>();
+
+        final int squareX = square.getX();
+        final int squareY = square.getY();
+
+        if(squareX != 7) {
+            //System.out.println("\nPRIMO FOR\n>-------------------------------------< ");
+            for (int i = squareX; i < 8; i++) {
+                if(i != squareX) {
+                    //System.out.println("\nGiro: "+i);
+                    //System.out.println("- Scorrendo casella: "+i+" "+squareY);
+                    Square sq = getSquare(i, squareY);
+
+                    if(!sq.isEmpty()) {
+                        list.add(sq);
+                        //System.out.println("--- La casella è piena, aggiunta e uscendo: "+i+" "+squareY);
+                        break;
+                    }
+
+                    //System.out.println("-- La casella non è piena, aggiunta: "+i+" "+squareY);
+
+                    list.add(sq);
+                }
+            }
+
+            //System.out.println(">-------------------------------------<");
+        }
+
+        if(squareX != 0) {
+            //System.out.println("\nSECONDO FOR\n>-------------------------------------< ");
+
+            int i = squareX;
+
+            do {
+                if(i != squareX) {
+                    //System.out.println("\nGiro: "+i);
+                    //System.out.println("- Scorrendo casella: "+i+" "+squareY);
+                    Square sq = getSquare(i, squareY);
+
+                    if(!sq.isEmpty()) {
+                        list.add(sq);
+                        //System.out.println("--- La casella è piena, aggiunta e uscendo: "+squareX+" "+i);
+                        break;
+                    }
+
+                    //System.out.println("-- La casella non è piena, aggiunta: "+squareX+" "+i);
+
+                    list.add(sq);
+                }
+
+                i--;
+
+            } while(i >= 0);
+
+            //System.out.println(">-------------------------------------<");
+        }
+
+        if(squareY != 7) {
+            //System.out.println("\nTERZO FOR\n>-------------------------------------<");
+            for (int i = squareY; i < 8; i++) {
+                if(i != squareY) {
+                                        //System.out.println("\nGiro: "+i);
+                    //System.out.println("- Scorrendo casella: "+squareX+" "+i);
+                    Square sq = getSquare(squareX, i);
+
+                    if(!sq.isEmpty()) {
+                        list.add(sq);
+                                                //System.out.println("--- La casella è piena, aggiunta e uscendo: "+squareX+" "+i);
+                        break;
+                    }
+                                        //System.out.println("-- La casella non è piena, aggiunta: "+squareX+" "+i);
+                    list.add(sq);
+                }
+            }
+
+            //System.out.println(">-------------------------------------<");
+        }
+
+        if(squareY != 0) {
+            //System.out.println("\nQUARTO FOR\n>-------------------------------------<");
+            int i = squareY;
+
+            do {
+                if(i != squareY) {
+                    //System.out.println("\nGiro: "+i);
+                    //System.out.println("- Scorrendo casella: "+squareX+" "+i);
+                    Square sq = getSquare(squareX, i);
+
+                    if(!sq.isEmpty()) {
+                        list.add(sq);
+                        //System.out.println("--- La casella è piena, aggiunta e uscendo: "+squareX+" "+i);
+                        break;
+                    }
+
+                    //System.out.println("-- La casella non è piena, aggiunta: "+squareX+" "+i);
+
+                    list.add(sq);
+                }
+
+                i--;
+
+            } while(i >= 0);
+
+            //System.out.println(">-------------------------------------<");
+        }
+
+        //System.out.println("\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+
+        return list;
+    }
+
+    public static List<Square> getDiagonals(Square square) {
+        List<Square> list = new ArrayList<>();
+
+        final int squareX = square.getX();
+        final int squareY = square.getY();
+
+        //System.out.println(squareX+" "+squareY);
+
+        if(squareX != 7) {
+            int squareYDecrementing = squareY;
+            //System.out.println("\nPRIMO FOR\n>-------------------------------------< ");
+            for (int i = squareX; i < 8; i++) {
+                if(i != squareX) {
+                    //System.out.println("\nGiro: "+i);
+                    //System.out.println("- Scorrendo casella: "+i+" "+squareY);
+                    Square sq = getSquare(i, --squareYDecrementing);
+
+                    if(sq != null && !sq.isEmpty()) {
+                        list.add(sq);
+                        //System.out.println("--- La casella è piena, aggiunta e uscendo: "+i+" "+squareY);
+                        break;
+                    }
+
+                    //System.out.println("-- La casella non è piena, aggiunta: "+i+" "+squareY);
+
+                    if(sq != null)
+                        list.add(sq);
+                }
+            }
+
+            //System.out.println(">-------------------------------------<");
+        }
+
+        if(squareX != 7) {
+            int squareYDecrementing = squareY;
+            //System.out.println("\nSECONDO FOR\n>-------------------------------------< ");
+            for (int i = squareX; i < 8; i++) {
+                if (i != squareX) {
+                    int a = ++squareYDecrementing;
+                    //System.out.println("\nGiro: "+i);
+                    //System.out.println("- Scorrendo casella: "+i+" "+a);
+                    Square sq = getSquare(i, a);
+
+                    if (sq != null && !sq.isEmpty()) {
+                        list.add(sq);
+                        //System.out.println("--- La casella è piena, aggiunta e uscendo: "+i+" "+a);
+                        break;
+                    }
+
+                    //System.out.println("-- La casella non è piena, aggiunta: "+i+" "+a);
+
+                    if (sq != null)
+                        list.add(sq);
+                }
+            }
+
+            //System.out.println(">-------------------------------------<");
+        }
+
+        if(squareX != 0) {
+            //System.out.println("\nTERZO FOR\n>-------------------------------------< ");
+            int squareYDecrementing = squareY;
+            int i = squareX;
+
+            do {
+                if(i != squareX) {
+                    //System.out.println("\nGiro: "+i);
+                    //System.out.println("- Scorrendo casella: "+i+" "+squareY);
+                    Square sq = getSquare(i, --squareYDecrementing);
+
+                    if(sq != null && !sq.isEmpty()) {
+                        list.add(sq);
+                        //System.out.println("--- La casella è piena, aggiunta e uscendo: "+i+" "+squareY);
+                        break;
+                    }
+
+                    //System.out.println("-- La casella non è piena, aggiunta: "+i+" "+squareY);
+
+                    if(sq != null)
+                     list.add(sq);
+                }
+
+                i--;
+
+            } while(i >= 0);
+
+            //System.out.println(">-------------------------------------<");
+        }
+
+        if(squareX != 0) {
+            //System.out.println("\nQUARTO FOR\n>-------------------------------------< ");
+            int squareYDecrementing = squareY;
+            int i = squareX;
+
+            do {
+                if(i != squareX) {
+                    int a = ++squareYDecrementing;
+                    //System.out.println("\nGiro: "+i);
+                    //System.out.println("- Scorrendo casella: "+i+" "+a);
+                    Square sq = getSquare(i, a);
+
+                    if(sq != null && !sq.isEmpty()) {
+                        list.add(sq);
+                        //System.out.println("--- La casella è piena, aggiunta e uscendo: "+i+" "+a);
+                        break;
+                    }
+
+                    //System.out.println("-- La casella non è piena, aggiunta: "+i+" "+a);
+
+                    if(sq != null)
+                        list.add(sq);
+
+                    //System.out.println("-- La casella non è piena, aggiunta: "+i+" "+a);
+                    if(sq != null)
+                        list.add(sq);
+                }
+
+                i--;
+
+            } while(i >= 0);
+
+            //System.out.println(">-------------------------------------<");
+        }
+
+        //System.out.println("\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+
+        return list;
+    }
+
+    public static AvailableMoves getCheck(Square square) {
+        
     }
 }
