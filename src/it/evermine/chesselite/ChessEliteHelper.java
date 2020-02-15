@@ -129,6 +129,26 @@ public class ChessEliteHelper {
         return false;
     }
 
+    public static List<Square> getKnight(Square square) {
+        List<Square> list = new ArrayList<>();
+
+        int squareX = square.getX();
+        int squareY = square.getY();
+
+        int X[] = { 2, 1, -1, -2, -2, -1, 1, 2 };
+        int Y[] = { 1, 2, 2, 1, -1, -2, -2, -1 };
+
+        for(int i = 0; i < X.length; i++) {
+            Square squareAt = ChessEliteHelper.getSquare(squareX + X[i], squareY + Y[i]);
+
+            if(squareAt != null) {
+                list.add(squareAt);
+            }
+        }
+
+        return list;
+    }
+
     public static List<Square> getAxes(Square square) {
         List<Square> list = new ArrayList<>();
 
@@ -370,7 +390,80 @@ public class ChessEliteHelper {
         return list;
     }
 
-    public static AvailableMoves getCheck(Square square) {
-        
+    public static boolean areOnTheSameDiagonal(int firstX, int firstY, int secondX, int secondY) {
+        return Math.abs(firstX - secondX) == Math.abs(firstY - secondY);
+    }
+
+    public static boolean areOnTheSameAxes(int firstX, int firstY, int secondX, int secondY) {
+        return firstX == secondX || firstY == secondY;
+    }
+
+    public static boolean areOnTheSameHorse(int firstX, int firstY, int secondX, int secondY) {
+        int X[] = { 2, 1, -1, -2, -2, -1, 1, 2 };
+        int Y[] = { 1, 2, 2, 1, -1, -2, -2, -1 };
+
+        for(int i = 0; i < X.length; i++) {
+            Square squareAt = ChessEliteHelper.getSquare(firstX + X[i], firstY + Y[i]);
+
+            if(squareAt != null && squareAt.getX() == secondX && squareAt.getY() == secondY) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public static boolean areOnTheSameKing(int firstX, int firstY, int secondX, int secondY) {
+        int X[] = { 0, 0, -1, -1, -1, 1, 1, 1 };
+        int Y[] = { -1, +1, -1, 1, 0, 1, -1, 0 };
+
+        for(int i = 0; i < X.length; i++) {
+            Square squareAt = ChessEliteHelper.getSquare(firstX + X[i], firstY + Y[i]);
+
+            if(squareAt != null && squareAt.getX() == secondX && squareAt.getY() == secondY) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public static List<Square> getCheck(Square square) {
+        List<Square> toReturn = new ArrayList<>();
+        List<Square> list = new ArrayList<>();
+
+        list.addAll(getDiagonals(square));
+        list.addAll(getAxes(square));
+        list.addAll(getKnight(square));
+
+        boolean isWhite = square.getPiece().isWhite();
+
+        for(Square sq : list) {
+            if(!sq.isEmpty() && sq.getPiece().isWhite() != isWhite) {
+                toReturn.add(square);
+            }
+        }
+
+        return toReturn;
+    }
+
+    public static List<Square> getKing(Square square) {
+        List<Square> list = new ArrayList<>();
+
+        int squareX = square.getX();
+        int squareY = square.getY();
+
+        int X[] = { 0, 0, -1, -1, -1, 1, 1, 1 };
+        int Y[] = { -1, +1, -1, 1, 0, 1, -1, 0 };
+
+        for(int i = 0; i < X.length; i++) {
+            Square squareAt = ChessEliteHelper.getSquare(squareX + X[i], squareY + Y[i]);
+
+            if(squareAt != null) {
+                list.add(squareAt);
+            }
+        }
+
+        return list;
     }
 }

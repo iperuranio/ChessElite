@@ -6,6 +6,7 @@ import it.evermine.chesselite.chess.Square;
 import it.evermine.chesselite.chess.images.PieceImage;
 import javafx.scene.layout.GridPane;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Console;
 import java.util.Collection;
@@ -21,6 +22,10 @@ public class ChessBoard {
     private Square[][] mainMatrix;
     @Getter
     private AvailableMoves previousMoves;
+    @Getter @Setter
+    private boolean whiteCheck;
+    @Getter @Setter
+    private boolean blackCheck;
 
     public ChessBoard(GridPane mainBoard, Square[][] mainMatrix) {
         this.mainBoard = mainBoard;
@@ -65,8 +70,14 @@ public class ChessBoard {
 
                 if (square != null && !square.isEmpty()) {
                     square.getPiece().getImage().updatePosition(i, j);
+                    square.updateCoordinates(i, j);
+                    square.updatePiece();
+                    if(square.isCheck()) {
+                        PieceImage.checkGround(i, j);
+                    }
                 } else {
                     PieceImage.clearImage(i, j);
+                    PieceImage.resetGround(i, j);
                 }
             }
         }
@@ -140,6 +151,12 @@ public class ChessBoard {
         for (int x = 0; x < totalX; x++) {
             for (int y = 0; y < totalY/2; y++) {
                 Square tmp = mainMatrix[x][totalY - y - 1];
+
+                if(mainMatrix[x][y].isCheck()) {
+                    PieceImage.resetGround(x, y);
+                    PieceImage.checkGround(x, totalY - y - 1);
+                }
+
                 mainMatrix[x][totalY - y - 1] = mainMatrix[x][y];
                 mainMatrix[x][y] = tmp;
             }

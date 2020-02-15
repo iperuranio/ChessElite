@@ -26,6 +26,10 @@ public class Pawn implements Piece {
     private boolean white;
     @Getter @Setter
     private boolean used; //da aggiornare
+    @Getter @Setter
+    private boolean dead;
+    @Getter @Setter
+    private Square square;
 
     public Pawn(PieceImage image, boolean white) {
         this.image = image;
@@ -41,6 +45,42 @@ public class Pawn implements Piece {
     @Override
     public boolean canMoves(int x, int y) {
         return false;
+    }
+
+    public List<Square> getEnemyEatingSquares(Square square) {
+        AvailableMoves moves = new AvailableMoves();
+        List<Square> squares = new ArrayList<>();
+
+        System.out.println(square.getX()+" "+square.getY());
+
+        if(!square.isRightCorner()) {
+            Square sq = ChessEliteHelper.getSquare(square.getX() + 1, square.getY() +1);
+
+            System.out.println(sq.getX()+" "+sq.getY());
+
+            if(sq.isEmpty()) {
+                squares.add(sq);
+            } else if(sq.areEnemies(square)) {
+                squares.add(sq);
+            }
+        }
+
+        if(!square.isLeftCorner()) {
+            Square sq = ChessEliteHelper.getSquare(square.getX() - 1, square.getY() +1);
+
+            System.out.println(sq.getX()+" "+sq.getY());
+
+            if(sq.isEmpty()) {
+                squares.add(sq);
+            } else if(sq.areEnemies(square)) {
+                squares.add(sq);
+            }
+        }
+
+        moves.setMoves(squares);
+        moves.generateMoves(square, true);
+
+        return moves.getMoves();
     }
 
     @Override

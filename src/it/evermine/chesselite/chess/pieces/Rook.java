@@ -28,6 +28,10 @@ public class Rook implements Piece {
     private boolean white; //da aggiornare
     @Getter @Setter
     private boolean used; //da aggiornare
+    @Getter @Setter
+    private boolean dead;
+    @Getter @Setter
+    private Square square;
 
     public Rook(PieceImage image, boolean white) {
         this.image = image;

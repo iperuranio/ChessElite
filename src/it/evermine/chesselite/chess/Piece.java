@@ -79,4 +79,12 @@ public interface Piece {
     default boolean isSomething(Pieces piece) {
         return getName().equals(piece.getName());
     }
+
+    boolean isDead();
+
+    void setDead(boolean bool);
+
+    Square getSquare();
+
+    void setSquare(Square square);
 }

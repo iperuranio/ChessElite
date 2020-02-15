@@ -44,7 +44,11 @@ public class PieceImage {
         ChessEliteHelper.getImageViewFromPosition(x, y).setImage(null);
     }
 
-    public void blueGround(Pane pane) {
+    public static void checkGround(int x, int y) {
+        ChessEliteHelper.getPaneFromPosition(x, y).setStyle("-fx-background-color: red;");
+    }
+
+    public static void blueGround(Pane pane) {
         pane.setStyle("-fx-background-color: #80d7ff;");
     }
 

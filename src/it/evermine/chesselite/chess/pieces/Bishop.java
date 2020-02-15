@@ -27,6 +27,10 @@ public class Bishop implements Piece {
     private boolean white;
     @Getter @Setter
     private boolean used; //da aggiornare
+    @Getter @Setter
+    private boolean dead;
+    @Getter @Setter
+    private Square square;
 
     public Bishop(PieceImage image, boolean white) {
         this.image = image;

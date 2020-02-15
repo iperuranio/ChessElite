@@ -1,5 +1,6 @@
 package it.evermine.chesselite.chess.pieces;
 
+import it.evermine.chesselite.ChessEliteHelper;
 import it.evermine.chesselite.chess.AvailableMoves;
 import it.evermine.chesselite.chess.Piece;
 import it.evermine.chesselite.chess.Square;
@@ -22,6 +23,10 @@ public class King implements Piece {
     private boolean white; //da aggiornare
     @Getter @Setter
     private boolean used; //da aggiornare
+    @Getter @Setter
+    private boolean dead;
+    @Getter @Setter
+    private Square square;
 
     public King(PieceImage image, boolean white) {
         this.image = image;
@@ -40,7 +45,11 @@ public class King implements Piece {
 
     @Override
     public AvailableMoves getMoves(Square square) {
-        return null;
+        AvailableMoves moves = new AvailableMoves();
+        moves.setMoves(ChessEliteHelper.getKing(square));
+
+        moves.generateMoves(square, true);
+        return moves;
     }
 
     @Override

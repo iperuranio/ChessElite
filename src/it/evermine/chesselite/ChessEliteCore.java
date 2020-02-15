@@ -6,6 +6,8 @@ import it.evermine.chesselite.chess.Square;
 import it.evermine.chesselite.chess.images.PieceImage;
 import it.evermine.chesselite.chess.pieces.*;
 import javafx.application.Application;
+import javafx.concurrent.Task;
+import javafx.concurrent.WorkerStateEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -25,6 +27,8 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class ChessEliteCore extends Application {
+    @Getter
+    private static List<Piece> pieces = new ArrayList<>();
     @Getter
     private static boolean whiteTourn = true;
     @Getter
@@ -90,7 +94,12 @@ public class ChessEliteCore extends Application {
         List<Square> list = new ArrayList<>();
 
         for(int i = 0; i < 8; i++) {
-            list.add(new Square((pieces.length == 1 ? pieces[0] : pieces[i]).cloneObject(), i, max));
+            Piece dummy = (pieces.length == 1 ? pieces[0] : pieces[i]).cloneObject();
+            Square sq = new Square(dummy, i, max);
+            dummy.setSquare(sq);
+
+            ChessEliteCore.getPieces().add(dummy);
+            list.add(sq);
         }
 
         return list;
@@ -109,6 +118,17 @@ public class ChessEliteCore extends Application {
                     int[] dim = ChessEliteHelper.getIDFromPane(pane.getId());
                     Square clickedSquare = ChessEliteHelper.getSquareFromPane(pane.getId(), dim);
 
+                    Piece piece = clickedSquare.getPiece();
+                    if(piece == null)
+                        System.out.println(">----- "+clickedSquare.getX()+" "+clickedSquare.getY()+" VUOTA -----<");
+                    else if(piece.getSquare() != null) {
+                        System.out.println(">----- "+clickedSquare.getX()+" "+clickedSquare.getY()+" "+piece.getName()+" "+piece.getSquare().getX()+" "+piece.getSquare().getY()+" -----<");
+                    } else {
+                        System.out.println(">----- "+clickedSquare.getX()+" "+clickedSquare.getY()+" "+piece.getName()+" -----<");
+                    }
+
+
+
                     if(clickedSquare.isEmpty()) {
                         makeMove(clickedSquare);
                     } else {
@@ -125,7 +145,7 @@ public class ChessEliteCore extends Application {
         }
     }
 
-    public void changeTourn() {
+    public static void changeTourn() {
         whiteTourn = !whiteTourn;
 
         chessBoard.flip();
@@ -139,8 +159,32 @@ public class ChessEliteCore extends Application {
         getChessBoard().clearAndRemoveFromScreenMoves();
 
         if(requestedSquare != null) {
-            clickedSquare.move(requestedSquare);
-            changeTourn();
+            Task<Void> sleeper = new Task<Void>() {
+                @Override
+                protected Void call() throws Exception {
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+
+                    }
+                    return null;
+                }
+            };
+
+            sleeper.setOnSucceeded(new EventHandler<WorkerStateEvent>() {
+                @Override
+                public void handle(WorkerStateEvent event) {
+                    ChessEliteCore.changeTourn();
+                }
+            });
+            sleeper.setOnRunning(new EventHandler<WorkerStateEvent>() {
+                @Override
+                public void handle(WorkerStateEvent event) {
+                    clickedSquare.move(requestedSquare);
+                }
+            });
+
+            new Thread(sleeper).start();
         }
     }
 

@@ -26,6 +26,10 @@ public class Knight implements Piece {
     private boolean white; //da aggiornare
     @Getter @Setter
     private boolean used; //da aggiornare
+    @Getter @Setter
+    private boolean dead;
+    @Getter @Setter
+    private Square square;
 
     public Knight(PieceImage image, boolean white) {
         this.image = image;
@@ -45,23 +49,8 @@ public class Knight implements Piece {
     @Override
     public AvailableMoves getMoves(Square square) {
         AvailableMoves moves = new AvailableMoves();
-        List<Square> list = new ArrayList<>();
 
-        int squareX = square.getX();
-        int squareY = square.getY();
-
-        int X[] = { 2, 1, -1, -2, -2, -1, 1, 2 };
-        int Y[] = { 1, 2, 2, 1, -1, -2, -2, -1 };
-
-        for(int i = 0; i < X.length; i++) {
-            Square squareAt = ChessEliteHelper.getSquare(squareX + X[i], squareY + Y[i]);
-
-            if(squareAt != null) {
-                list.add(squareAt);
-            }
-        }
-
-        moves.setMoves(list);
+        moves.setMoves(ChessEliteHelper.getKnight(square));
         moves.generateMoves(square, true);
 
         return moves;

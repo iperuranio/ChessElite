@@ -10,15 +10,16 @@
       <change beforePath="$PROJECT_DIR$/src/it/evermine/chesselite/ChessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/evermine/chesselite/ChessBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/evermine/chesselite/ChessEliteCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/evermine/chesselite/ChessEliteCore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/evermine/chesselite/ChessEliteHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/evermine/chesselite/ChessEliteHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/evermine/chesselite/chess/AvailableMoves.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/evermine/chesselite/chess/AvailableMoves.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/evermine/chesselite/chess/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/evermine/chesselite/chess/Piece.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/evermine/chesselite/chess/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/evermine/chesselite/chess/Square.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/evermine/chesselite/chess/images/PieceImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/evermine/chesselite/chess/images/PieceImage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Bishop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/King.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Knight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Pawn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Queen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Rook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/evermine/chesselite/main_gui.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/evermine/chesselite/main_gui.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/it/evermine/chesselite/main_gui.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/evermine/chesselite/main_gui.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,13 +76,14 @@
     <session id="1566510630">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
-          <entry key="project.open.time.0" value="2" />
+          <entry key="project.closed" value="14" />
+          <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.5" value="2" />
-          <entry key="project.open.time.6" value="5" />
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.open.time.6" value="7" />
+          <entry key="project.open.time.7" value="2" />
+          <entry key="project.opened" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -89,7 +91,7 @@
           <entry key="class" value="1" />
           <entry key="fxml" value="15" />
           <entry key="iml" value="2" />
-          <entry key="java" value="151" />
+          <entry key="java" value="182" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
@@ -97,21 +99,21 @@
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="151" />
+          <entry key="JAVA" value="182" />
           <entry key="XML" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="fxml" value="264" />
-          <entry key="java" value="21730" />
+          <entry key="java" value="26811" />
           <entry key="txt" value="5" />
           <entry key="xml" value="62" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="21730" />
+          <entry key="JAVA" value="26811" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="XML" value="326" />
         </counts>
@@ -123,11 +125,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/ChessEliteCore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="73" column="77" lean-forward="true" selection-start-line="73" selection-start-column="77" selection-end-line="73" selection-end-column="77" />
+            <state relative-caret-position="287">
+              <caret line="126" column="130" lean-forward="true" selection-start-line="126" selection-start-column="130" selection-end-line="126" selection-end-column="130" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -135,11 +137,58 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/chess/Square.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="111" column="46" selection-start-line="111" selection-start-column="46" selection-end-line="111" selection-end-column="46" />
+            <state relative-caret-position="169">
+              <caret line="73" column="42" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4991#4992#0" expanded="true" />
+                <element signature="e#5033#5034#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/chess/AvailableMoves.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="60" column="73" lean-forward="true" selection-start-line="60" selection-start-column="73" selection-end-line="60" selection-end-column="73" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4645#4646#0" expanded="true" />
+                <element signature="e#4687#4688#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Pawn.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="139">
+              <caret line="55" column="37" lean-forward="true" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
+              <folding>
+                <element signature="e#2745#2746#0" expanded="true" />
+                <element signature="e#2778#2779#0" expanded="true" />
+                <element signature="e#2823#2824#0" expanded="true" />
+                <element signature="e#2860#2861#0" expanded="true" />
+                <element signature="e#2913#2914#0" expanded="true" />
+                <element signature="e#2958#2959#0" expanded="true" />
+                <element signature="e#3009#3010#0" expanded="true" />
+                <element signature="e#3052#3053#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Bishop.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="79">
+              <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -150,24 +199,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/ChessBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="128" column="37" lean-forward="true" selection-start-line="128" selection-start-column="37" selection-end-line="128" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3393#3394#0" expanded="true" />
-                <element signature="e#3429#3430#0" expanded="true" />
-                <element signature="e#3473#3474#0" expanded="true" />
-                <element signature="e#3517#3518#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/chess/AvailableMoves.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="752">
-              <caret line="49" column="25" lean-forward="true" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+            <state relative-caret-position="-949">
+              <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -178,20 +211,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/ChessEliteHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1504">
-              <caret line="198" column="37" selection-start-line="198" selection-start-column="37" selection-end-line="198" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Queen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+            <state relative-caret-position="468">
+              <caret line="417" column="49" lean-forward="true" selection-start-line="417" selection-start-column="49" selection-end-line="417" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -223,6 +244,8 @@
       <find>nuova pa</find>
       <find>s.isWhite() ?  : s.getY() &gt; Y ? s.getY() : Y;</find>
       <find>System</find>
+      <find>king</find>
+      <find>PORCODDIO</find>
     </findStrings>
     <replaceStrings>
       <replace>1</replace>
@@ -245,20 +268,20 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/it/evermine/chesselite/guis/GUIObtainer.java" />
         <option value="$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Pieces.java" />
-        <option value="$PROJECT_DIR$/src/it/evermine/chesselite/chess/AvailableMoves.java" />
-        <option value="$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/King.java" />
-        <option value="$PROJECT_DIR$/src/it/evermine/chesselite/chess/Piece.java" />
-        <option value="$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Knight.java" />
         <option value="$PROJECT_DIR$/src/it/evermine/chesselite/main_gui.fxml" />
-        <option value="$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Pawn.java" />
         <option value="$PROJECT_DIR$/src/it/evermine/chesselite/chess/images/PieceImage.java" />
-        <option value="$PROJECT_DIR$/src/it/evermine/chesselite/ChessBoard.java" />
-        <option value="$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Bishop.java" />
+        <option value="$PROJECT_DIR$/src/it/evermine/chesselite/chess/Piece.java" />
         <option value="$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Rook.java" />
         <option value="$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Queen.java" />
+        <option value="$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Knight.java" />
+        <option value="$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Bishop.java" />
         <option value="$PROJECT_DIR$/src/it/evermine/chesselite/ChessEliteHelper.java" />
-        <option value="$PROJECT_DIR$/src/it/evermine/chesselite/chess/Square.java" />
+        <option value="$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/King.java" />
+        <option value="$PROJECT_DIR$/src/it/evermine/chesselite/ChessBoard.java" />
+        <option value="$PROJECT_DIR$/src/it/evermine/chesselite/chess/AvailableMoves.java" />
         <option value="$PROJECT_DIR$/src/it/evermine/chesselite/ChessEliteCore.java" />
+        <option value="$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Pawn.java" />
+        <option value="$PROJECT_DIR$/src/it/evermine/chesselite/chess/Square.java" />
       </list>
     </option>
   </component>
@@ -289,6 +312,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -331,7 +355,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -346,7 +369,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580224088183" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581791994080" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -490,7 +513,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.23081024" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.24147122" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -500,7 +523,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32929516" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33920705" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39977974" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -524,7 +547,7 @@
       <window_info anchor="right" id="Theme Preview" order="9" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.2153518" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.24147122" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -533,8 +556,8 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32929516" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4328194" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33920705" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39977974" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -545,7 +568,7 @@
       <window_info anchor="bottom" id="Profiler" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" weight="0.32929516" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32929516" />
-      <window_info anchor="bottom" id="Terminal" order="14" />
+      <window_info anchor="bottom" id="Terminal" order="14" weight="0.32929516" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -642,29 +665,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Pieces.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
-          <folding>
-            <element signature="e#1100#1101#0" expanded="true" />
-            <element signature="e#1140#1141#0" expanded="true" />
-            <element signature="e#1171#1172#0" expanded="true" />
-            <element signature="e#1211#1212#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/King.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/JDK_Giusta/javafx-src.zip!/com/sun/javafx/css/Stylesheet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-546">
@@ -673,101 +673,78 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/main_gui.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="21" column="87" selection-start-line="21" selection-start-column="87" selection-end-line="21" selection-end-column="87" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Knight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1837#1838#0" expanded="true" />
-            <element signature="e#1870#1871#0" expanded="true" />
-            <element signature="e#1915#1916#0" expanded="true" />
-            <element signature="e#1952#1953#0" expanded="true" />
-            <element signature="e#2005#2006#0" expanded="true" />
-            <element signature="e#2050#2051#0" expanded="true" />
-            <element signature="e#2101#2102#0" expanded="true" />
-            <element signature="e#2144#2145#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/chess/images/PieceImage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+        <state relative-caret-position="406">
+          <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1011#1012#0" expanded="true" />
             <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="e#1253#1254#0" expanded="true" />
-            <element signature="e#1316#1317#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/chess/Piece.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="66" column="20" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1417#1418#0" expanded="true" />
-            <element signature="e#1464#1465#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Bishop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="64" column="45" lean-forward="true" selection-start-line="64" selection-start-column="45" selection-end-line="64" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Rook.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Queen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+        <state relative-caret-position="320">
+          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Pawn.java">
+    <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Pieces.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        <state relative-caret-position="624">
+          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/chess/Piece.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1172#1173#0" expanded="true" />
+            <element signature="e#1219#1220#0" expanded="true" />
+            <element signature="e#1417#1418#0" expanded="true" />
+            <element signature="e#1464#1465#0" expanded="true" />
+            <element signature="e#1729#1730#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Rook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="33" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/King.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/chess/AvailableMoves.java">
+    <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Knight.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="752">
-          <caret line="49" column="25" lean-forward="true" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+        <state relative-caret-position="522">
+          <caret line="52" column="45" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -776,8 +753,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/ChessEliteHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1504">
-          <caret line="198" column="37" selection-start-line="198" selection-start-column="37" selection-end-line="198" selection-end-column="37" />
+        <state relative-caret-position="468">
+          <caret line="417" column="49" lean-forward="true" selection-start-line="417" selection-start-column="49" selection-end-line="417" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Bishop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -786,34 +773,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/ChessBoard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="128" column="37" lean-forward="true" selection-start-line="128" selection-start-column="37" selection-end-line="128" selection-end-column="37" />
+        <state relative-caret-position="-949">
+          <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3393#3394#0" expanded="true" />
-            <element signature="e#3429#3430#0" expanded="true" />
-            <element signature="e#3473#3474#0" expanded="true" />
-            <element signature="e#3517#3518#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/chess/Square.java">
+    <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/chess/AvailableMoves.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="111" column="46" selection-start-line="111" selection-start-column="46" selection-end-line="111" selection-end-column="46" />
+        <state relative-caret-position="361">
+          <caret line="60" column="73" lean-forward="true" selection-start-line="60" selection-start-column="73" selection-end-line="60" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4645#4646#0" expanded="true" />
+            <element signature="e#4687#4688#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/ChessEliteCore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="73" column="77" lean-forward="true" selection-start-line="73" selection-start-column="77" selection-end-line="73" selection-end-column="77" />
+        <state relative-caret-position="287">
+          <caret line="126" column="130" lean-forward="true" selection-start-line="126" selection-start-column="130" selection-end-line="126" selection-end-column="130" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/chess/pieces/Pawn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="55" column="37" lean-forward="true" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
+          <folding>
+            <element signature="e#2745#2746#0" expanded="true" />
+            <element signature="e#2778#2779#0" expanded="true" />
+            <element signature="e#2823#2824#0" expanded="true" />
+            <element signature="e#2860#2861#0" expanded="true" />
+            <element signature="e#2913#2914#0" expanded="true" />
+            <element signature="e#2958#2959#0" expanded="true" />
+            <element signature="e#3009#3010#0" expanded="true" />
+            <element signature="e#3052#3053#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/evermine/chesselite/chess/Square.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="73" column="42" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4991#4992#0" expanded="true" />
+            <element signature="e#5033#5034#0" expanded="true" />
           </folding>
         </state>
       </provider>
