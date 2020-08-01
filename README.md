@@ -1,2 +1,4 @@
 # ChessElite
- A new chess game
+ A new chess game.
+ 
+ Currently abandoned.
